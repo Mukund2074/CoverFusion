@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media print {
+  /* Hide all body elements except the print section */
+  body * {
+      visibility: hidden;
+  }
+
+  .print-main {
+      visibility: visible; /* Make the content inside printRef visible */
+  }
+
+}
