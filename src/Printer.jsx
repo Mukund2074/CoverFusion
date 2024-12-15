@@ -40,11 +40,10 @@ const PrintPage = () => {
       .print-footer-text { font-size: 13px; }
       .print-logo { width: 1.5rem; height: 1.5rem; margin-left: 0.5rem; object-fit: contain; }
       .bold-text { font-weight: bold; }
-      .print-product { position: relative; background-color: #d0d0d056; display: flex; flex-direction: column; box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25); border-radius: 10px; }
+       .print-product { position: relative; background-color: #d0d0d056; display: flex; flex-direction: column; box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25); border-radius: 10px; }
         .print-product-image { z-index: 0; position: absolute; top: 0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%; border-radius: 8px; }
        .print-product-title { font-size: 20px; font-weight: 700; display: flex; justify-content: center; align-items: center; backdrop-filter: blur(10px); border-radius: 10px; padding: 0.5rem; }
       .print-product-text { font-size: 18px; font-weight: 700; display: flex; align-items: center; backdrop-filter: blur(1px); filter: brightness(95%); border-radius: 10px; padding: 0.5rem; color: black;}
-
 
     `;
 
