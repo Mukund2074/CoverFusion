@@ -16,8 +16,8 @@ const PrintPage = () => {
 
 
     const css = ` 
-      .print-section { padding-top: 7cm;  width: 21cm; height: 29.7cm; padding-left: 0.5cm; padding-right: 0.5cm; }
-      .print-flex-container { position: relative; display: flex; flex-direction: column; height: 12cm; padding: 2px; overflow: hidden; }
+      .print-section { width: 21cm; height: 29.7cm; padding-left: 0.5cm; padding-right: 0.5cm; }
+      .print-flex-container { margin-top: 7cm; position: relative; display: flex; flex-direction: column; height: 12cm; overflow: hidden; }
       .print-header {  display: flex; justify-content: flex-start; align-items: flex-start; }
       .print-info { position: relative; display: flex; flex-direction: column; padding: 0.5rem; box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25); border-radius: 10px;  }
       .bg-image-info { position: absolute; top: 0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%; border-radius: 10px; }
@@ -40,9 +40,10 @@ const PrintPage = () => {
       .print-footer-text { font-size: 13px; }
       .print-logo { width: 1.5rem; height: 1.5rem; margin-left: 0.5rem; object-fit: contain; }
       .bold-text { font-weight: bold; }
-      .print-product { background-image: url('./product.png'); background-color: #d0d0d056; display: flex; flex-direction: column; padding-top: 1rem; padding: 1rem; box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25); border-radius: 10px; }
-       .print-product-title { font-size: 20px; font-weight: 700; margin-top : 1rem; display: flex; justify-content: center; align-items: center; backdrop-filter: blur(10px); border-radius: 10px; padding: 0.5rem; }
-      .print-product-text { font-size: 18px; font-weight: 700; margin-top : 2rem; display: flex;  align-items: center; filter: brightness(50%); border-radius: 10px; padding: 0.5rem;  background-color: #d0d0d056; color: black;}
+      .print-product { position: relative; background-color: #d0d0d056; display: flex; flex-direction: column; box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25); border-radius: 10px; }
+        .print-product-image { z-index: 0; position: absolute; top: 0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%; border-radius: 8px; }
+       .print-product-title { font-size: 20px; font-weight: 700; display: flex; justify-content: center; align-items: center; backdrop-filter: blur(10px); border-radius: 10px; padding: 0.5rem; }
+      .print-product-text { font-size: 18px; font-weight: 700; display: flex; align-items: center; backdrop-filter: blur(1px); filter: brightness(95%); border-radius: 10px; padding: 0.5rem; color: black;}
 
 
     `;
@@ -55,7 +56,7 @@ const PrintPage = () => {
             <React.Fragment>
                 <style>{css}</style>
 
-                <section className="print-section">
+                <section ref={printRef} className="print-section">
 
                     <div className="print-flex-container">
                         <div className="print-header">
@@ -125,7 +126,7 @@ const PrintPage = () => {
 
 
                     <span className='print-product'>
-
+                        <img src='./product.png' alt="Logo" className="print-product-image" />
                         <font className="print-product-title">PRODUCT LIST </font>
                         <font className='print-product-text'>
                             ◎   તલ, રાય, જીરૂ, વરિયાળી, મેથી, અજમો <br />
