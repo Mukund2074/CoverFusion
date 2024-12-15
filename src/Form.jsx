@@ -46,7 +46,7 @@ export default function Form() {
     <main className='bg-slate-100 min-h-screen min-w-screen   p-2 pb-16'>
 
       <form onSubmit={handleSubmit} className='flex flex-col gap-2 md:w-1/2 mx-auto p-2 bg-slate-300 shadow-xl rounded-xl shadow-slate-400 '>
-      <h2 className='text-xl font-bold p-2 bg-slate-300 shadow-xl rounded-xl shadow-slate-400 '> COVER PRINTER SOFTWARE</h2>
+      
         {inputFields.map((field, index) => {
           return (
             <span key={index} className='flex flex-col gap-2 items-start p-2'>
